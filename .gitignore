@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+build
+build-ssr
+*.local
+src/firebase.ts
+src/vite-env.d.ts
+.firebase
+.firebaserc

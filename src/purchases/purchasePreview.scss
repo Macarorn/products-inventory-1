@@ -1,0 +1,16 @@
+@use "../index.scss" as *;
+.productPurchasesReport{
+    display: flex;
+    p{
+        padding: .5rem;
+    }
+}
+.purchasesReportInfo{
+    cursor: pointer;
+}
+
+.purchasesExtraInfoDataRows{
+    &:hover{
+        background: rgba($beautyBlue, .1);
+    }
+}

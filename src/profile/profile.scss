@@ -1,0 +1,123 @@
+@use "../index.scss" as *;
+.profile{
+    width: fit-content;
+    background: white;
+    margin:auto;
+    // margin-top: .5rem;
+    border-radius: .5rem;
+    color: #3b3b3b;
+    svg{
+        color: gray;
+    }
+}
+.profileHeader{
+    position: relative;
+    // padding: .5rem;
+    h2{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.profileHeaderPanel{
+    display: flex;
+    h2{
+        padding-top: .5rem;
+    }
+    svg{
+        cursor: pointer;
+        padding: .5rem;
+    }
+}
+.profileImgContainer{
+    display: flex;
+    align-items: center;
+    // padding-inline: 1rem;
+    // padding-top: .5rem;
+    padding-top: 1rem;
+    justify-content: center;
+}
+.profileData{
+    padding: .5rem;
+}
+.profileName{
+    margin-left: .5rem;
+    width: 100%;
+    max-width: 35ch;
+}
+
+
+.profileImg{
+    $imgSize: 5rem;
+    width: clamp($imgSize, $imgSize, $imgSize);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    // background: $beautyBlue;
+    display: grid;
+    place-items: center;
+    svg{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    img{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+.profileCategoriesList{
+    min-height: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    margin-top: .5rem;
+    div{
+        cursor: default;
+        border-radius: 3rem;
+        // border: 1px solid $beautyBlue;
+        background: $beautyBlue;
+        margin-left: .2rem;
+        margin-bottom: .3rem;
+    }
+    p{
+        padding-inline: .5rem;
+        text-transform: capitalize;
+        color: white;
+    }
+}
+.profileCategories{
+    padding: .5rem;
+    h3{
+        cursor: default;
+        // text-align: center;
+    }
+    form{
+        display: flex;
+        width: fit-content;
+        margin: auto;
+        // flex-direction: column;
+    }
+    label{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        width: 50%;
+        padding: .3rem;
+        border: none;
+        outline: none;
+        margin: auto;
+        border-bottom: 1px solid $beautyBlue;
+    }
+    button{
+        cursor: pointer;
+        background: $beautyBlue;
+        border: none;
+        border-radius: .4rem;
+        padding: .3rem;
+        margin-left: auto;
+        color:white;
+    }
+}

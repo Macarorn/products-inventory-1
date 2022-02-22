@@ -1,0 +1,44 @@
+$mediaThreshold: 700px;
+$boxShadowParams: 0 0 .2rem rgba(gray, .5);
+$beautyBlue: #03a9f4;
+$blue2: rgb(0, 153, 255);
+$buttonPadding: .7rem;
+$buttonSvgSize: 1.5rem;
+$sidebarSize: calc($buttonPadding * 2 + $buttonSvgSize);
+$navbar_li_width: 10rem;
+$sidebarFullSize: calc($sidebarSize + $navbar_li_width);
+$darkBackground: #202020;
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background: rgba(black, 0.3);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+html{
+    overflow-x: hidden;
+}
+.flex{
+    display: flex;
+}
+.rgbaGray_05{
+    background: rgba(gray, .05);
+}
+
+@media screen and (min-width: $mediaThreshold){
+    .page_nav_margin{
+        margin-left: $sidebarSize;
+        height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+}
+@media screen and(max-width: $mediaThreshold){
+    .page_nav_margin{
+        margin-top: $sidebarSize;
+        height: calc(100vh - $sidebarSize);
+    }
+}

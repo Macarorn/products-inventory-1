@@ -1,0 +1,25 @@
+@use "../index.scss" as *;
+.productPreview{
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+    box-shadow: $boxShadowParams;
+    width: 23%;
+    height: fit-content;
+    img{
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    p{
+        width: 100%;
+        overflow-wrap: break-word;
+        height: 1rem;
+        padding-left: .5rem;
+        padding-bottom: .5rem;
+        text-transform: capitalize;
+    }
+}
+@media screen and (max-width: $mediaThreshold){
+    .productPreview{
+        width: 45%;
+    }
+}

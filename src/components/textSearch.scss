@@ -1,0 +1,18 @@
+@use "../index.scss" as *;
+.textSearch{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border-radius: 3rem;
+    overflow: hidden;
+    input{
+        border: none;
+        outline: none;
+    }
+    svg{
+        padding-left: .5rem;
+        font-size: 1.5rem;
+        color:gray;
+    }
+}

@@ -1,0 +1,115 @@
+@use '../index.scss' as *;
+// @use "../components/filtersStyles.scss";
+
+// $mediaScreen: 
+.products{
+    width: 90%;
+    height: 95%;
+    margin: auto;
+    background: white;
+    padding: .5rem;
+    // svg{
+        // font-size: 3rem;
+    // }
+    h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// .productsHeader{
+    // width: 100%;
+    // display: flex;
+    // padding: 1rem;
+    
+// }
+.productHeader_addNewProduct{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.productsList{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    overflow-y: scroll;
+    // background: red;
+}
+.filtersCard{
+    // overflow: hidden;
+    border-radius: .5rem;
+    position: relative;
+    // background: red;
+    // padding: 0;
+}
+.products_inStockFilter{
+    padding-block: 1rem;
+}
+.filtersCardClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.products_categoryFilter{
+    display: flex;
+    flex-direction: column;
+    max-width: 40ch;
+    flex-wrap: wrap;
+    // align-items: flex-start;
+    p{
+        width: 100%;
+        text-align: left;
+    }
+    .products_categoryFilterText{
+        padding-bottom: .5rem;
+
+    }
+}
+.filterCardApplyFilter{
+    border: none;
+    background: $beautyBlue;
+    padding: .3rem;
+    border-radius: .5rem;
+    color:white;
+}
+.filtersCardInputs{
+    span{
+        display: flex;
+        align-items: center;
+    }
+    p{
+        margin-right: .5rem;    
+    }
+    .radioButtons{
+        padding-bottom: 1rem;
+        display: flex;
+        // width: 13rem;
+        flex-wrap: wrap;
+        // margin-top: 1rem;
+        p {
+            border: 1.5px solid gray;
+            border-radius: 3rem;
+            width: fit-content;
+            padding-inline: .5rem;
+            margin: .1rem;
+            color: gray;
+            &:hover{
+                // color: $beautyBlue;
+                border: 1.5px solid $beautyBlue;
+            }
+        }
+        input {
+            display: none;
+            &:checked ~ p{
+                border: 1.5px solid $beautyBlue;
+                color: $beautyBlue;
+            }
+        }
+    }
+}
+@media screen and (max-width:$mediaThreshold){
+    .productsList{
+        height: 70%;
+    }
+}

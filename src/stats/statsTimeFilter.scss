@@ -1,0 +1,81 @@
+@use "../index.scss" as * ;
+.statsTimeFilter{
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    span{
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+    }
+    svg{
+        color: gray;
+    }
+}
+.statsTimeFilterOptions{
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+}
+.statsTimeFilterButton{
+    cursor: pointer;
+    padding: .5rem;
+    background: whitesmoke;
+    // box-shadow: $boxShadowParams;
+    border-radius: .3rem;
+}
+.timeFilterSelected{
+    background: $beautyBlue;
+    color: white;
+}
+.statsTimeFilterCurrent{
+    margin-top: .5rem;
+    display: flex;
+    
+    p{
+        padding: .5rem;
+    }
+}
+.statsTimeFilterCustom{
+    display: flex;
+    span{
+        p{
+            margin-right: 1rem;
+        }
+        display: flex;
+        align-items: center;
+    }
+}
+.statsTimeFilterCustomOption{
+    padding: .5rem;
+    input{
+        margin-top: .5rem;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $beautyBlue;
+        width: 7ch;
+        padding: .2rem;
+        text-align: center;
+    }
+    .selectHeader{
+        margin-top: .5rem;
+        box-shadow: $boxShadowParams;
+        border-radius: 3rem;
+        padding-left: .5rem;
+    }
+}
+.statsMonthPicker{
+    background: white;
+    display: grid;
+    padding: .5rem;
+    border-radius: .5rem;
+    grid-template-columns: repeat(3, 1fr);
+    div{
+        cursor: pointer;
+        padding: .5rem;
+        &:hover{
+            background: rgba(0, 153, 255, 0.1);
+            border-radius: .5rem;
+        }
+    }
+}

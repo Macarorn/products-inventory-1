@@ -1,0 +1,71 @@
+@use '../index.scss' as *;
+$tableContainerMaxHeight: calc(100vh - $sidebarSize - 5rem);
+.purchases_title{
+    h2{
+        display: flex;
+        justify-content: center;
+        padding: .5rem;
+    }
+}
+
+
+table{
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    box-shadow: $boxShadowParams;
+}
+th{
+    padding: .7rem;
+    position: sticky;
+    z-index: 0;
+    top: 0;
+    background: gray;
+    color: whitesmoke;
+    border-bottom: 1px solid lightgray;
+
+}
+td{
+    height: 2.5rem;
+    padding-inline: .5rem;
+    // text-align: center;
+    cursor: pointer;
+        border-radius: .5rem;
+    &:last-child{
+        text-align: right;
+    }
+} 
+
+
+.td_name{
+    width: 30vw;
+    overflow-wrap: break-word;
+    padding-left: 1rem;
+    text-transform: capitalize;
+    // white-space: pre-wrap;
+}
+.tableContainer{
+    height: $tableContainerMaxHeight;
+    overflow: auto;
+    width: fit-content;
+
+    max-width: 100%;
+    margin: auto;
+    scrollbar-width: thin;
+    margin-bottom: 1rem;
+}
+
+.purchases_body{
+    
+    width: fit-content;
+    margin:auto;
+    max-width: 90%;
+}
+
+
+
+@media screen and (max-width: $mediaThreshold){
+    .tableContainer{
+        height: calc($tableContainerMaxHeight - $sidebarSize);
+    }
+}

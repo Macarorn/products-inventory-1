@@ -1,0 +1,129 @@
+@use "../index.scss" as *;
+
+.selectDateHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background: white;
+    border-radius: .2rem;
+    svg{
+        padding: 0;
+        color:rgb(100, 100, 100);
+        font-size: 1.5rem ;
+    }
+}
+.selectDateCheckbox{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: grid;
+    cursor: pointer;
+    place-items: center;
+    svg{
+        font-size: 1rem;
+    }
+
+}
+
+.selectDateDropDownIcon{
+    display: grid;
+    place-items: center;
+    cursor: pointer;    
+}
+.selectDateHeaderTitle{
+    color: rgb(100, 100, 100);
+}
+.selectDateModal{
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: rgba(black, .5);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.selectDateOptions{
+    background: white;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    padding: .5rem;
+    
+}
+.selectDateClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: gray;
+    padding: .2rem;
+    cursor: pointer;
+}
+.selectDateSelectOption{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    p{
+        padding: .5rem;
+    }
+    svg{
+        color:transparent;
+        font-size: 1rem;
+        padding-left: .1rem;
+    }
+}
+.selectDateModalTitle{
+    padding: .5rem;
+}
+.selectDateOption{
+    display: flex;
+
+    align-items: center;
+    cursor: pointer;
+}
+.optionSelected{
+    background: rgba($blue2, .1);
+    border-radius: .5rem;
+    svg{
+        color:rgb(0, 153, 255);
+    }
+}
+.selectDateTextDate{
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.rangeOptionSelected{
+    .selectDateTextDate{
+        background: rgba($blue2, .1);
+    }
+}
+
+.selectDateDisplayInfo{
+    height: 7rem;
+    padding-inline: 1rem;
+}
+.selectDateInfo_pTag{
+    p{
+        display: flex;
+        align-items: center;
+        padding-block: .2rem;
+        svg{
+            margin-left: auto;
+        }
+    }
+}
+.selectDateMonthSelected{
+    padding-top: 2rem;
+
+
+}
+
+.monthSelectYearInput, .monthSelectMonth, .monthSelectYearButtons{
+    &:hover{
+        border-radius: .5rem;
+        background: rgba($blue2, .1);
+    }
+}

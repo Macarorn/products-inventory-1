@@ -1,0 +1,119 @@
+@use "../index.scss" as *;
+.filterPanelButtons{
+    border:none;
+    box-shadow: $boxShadowParams;
+    border-radius: 3rem;
+    padding-inline: .5rem;
+    background: white;
+    color: #646464;
+    cursor: pointer;
+}
+
+.filterPanelRows{
+    padding-bottom: .3rem;
+    display: flex;
+    justify-content: space-between;
+
+    .textSearch{
+        margin-inline: .2rem;
+        border-radius: 3rem ;
+        box-shadow: $boxShadowParams;
+        max-width: 100%;
+        input{
+            width: 100%;
+        }
+        svg{
+            padding-left: .3rem;
+        }
+    }
+    .selectHeader{
+        box-shadow: $boxShadowParams;
+        border-radius: 3rem;
+        padding-left: .5rem;
+        color: gray;
+    }
+    svg{
+
+        color: gray !important;
+    }
+}
+
+.filterPanelToggleSearchBy{
+    display: flex;
+    align-items: center;
+    width: 8ch;
+    background: white;
+    padding-left: .3rem;
+    border-radius: 3rem;
+    box-shadow: $boxShadowParams;
+    color:#646464;
+    cursor: pointer;
+    svg{
+        font-size: 1.3rem;
+    }
+    p{
+        width: 100%;
+        margin-left: auto;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
+
+.filtersCard{
+    background: white;
+    // padding: 1rem;
+    
+    // height: fit-content;
+    max-height: 95vh;
+    // overflow-y: scroll;
+
+    .checkBoxes{
+    display: flex;
+    width: 13rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    p {
+        border: 1.5px solid gray;
+        border-radius: 3rem;
+        width: fit-content;
+        padding-inline: .5rem;
+        margin: .1rem;
+        color: gray;
+    }
+    input {
+        display: none;
+            &:checked ~ p{
+                border: 1.5px solid $beautyBlue;
+                color: $beautyBlue;
+            }
+        }
+    }
+}
+.filtersCardHeader{
+    position: relative;
+    color: gray;
+    padding: .5rem;
+    span{
+        display: flex;
+        align-items: center;
+    }
+    .filtersCardClose{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.filtersCardApplyDate{
+    display: flex;
+    align-items: center;
+    padding-block: 1rem;
+    p{
+        margin-right: .5rem;
+    }
+}
+.filtersCardInputs{
+    padding: 1rem;
+    max-height: 80vh;
+    overflow-y: scroll;
+}

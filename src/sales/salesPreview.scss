@@ -1,0 +1,24 @@
+@use "../index.scss" as *;
+.productSalesReport{
+    display: flex;
+    // overflow-x: scroll;
+    // width: 90%;
+    // justify-content: space-between;
+    
+    p{
+        // flex: 1/5;
+        padding: .5rem;
+    }
+}
+.salesReportInfo{
+    cursor: pointer;
+}
+// .sales_titles{
+    // display: flex;
+    
+// }
+.salesPreviewDataRows{
+    &:hover{
+        background: rgba($beautyBlue, .1);
+    }
+}

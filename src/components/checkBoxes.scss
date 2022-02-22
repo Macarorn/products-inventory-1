@@ -1,0 +1,48 @@
+// @use "../index.scss" as *;
+
+// .checkBoxSelectHeader{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: fit-content;
+//     background: white;
+//     border-radius: .2rem;
+//     svg{
+//         padding: 0;
+//         color:rgb(100, 100, 100);
+//         font-size: 1.5rem ;
+//     }
+// }
+// .checkBoxSelectCheck{
+//     width: 1.5rem;
+//     height: 1.5rem;
+//     display: grid;
+//     cursor: pointer;
+//     place-items: center;
+//     svg{
+//         font-size: 1rem;
+//     }
+
+// }
+
+
+.checkBoxes{
+
+//     // label{
+//         // display: flex;
+//         // align-items: center;
+//         // padding: .5rem;
+//     // }
+    p{
+        cursor: pointer;
+        // padding-left: .5rem;
+        // text-transform: capitalize;
+    }
+}
+// .checkBoxSelectClose{
+//     position: absolute;
+//     color: gray;
+//     padding: .2rem;
+//     top: 0;
+//     right: 0;
+// }

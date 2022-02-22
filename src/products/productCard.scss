@@ -1,0 +1,43 @@
+@use "../index.scss" as *;
+.productCard{
+    background: white;
+    
+    width: 50%;
+    h2{
+        padding-left: 1rem;
+        padding-bottom: .5rem;
+        text-transform: capitalize;
+    }
+    span{
+        display: flex;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+    p{
+        text-transform: capitalize;
+    }
+    max-width: 40ch;
+    overflow-y: scroll;
+    max-height: 90vh;
+    position: relative;
+    scrollbar-width: none;
+    border-radius: .5rem;
+    .productCardCloseIcon{
+        color: gray;
+        position: absolute;
+        right: 0;
+    }
+}
+.productCardImg{
+    img{
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+}
+.productExtraInfoDataTitle{
+    font-weight: bold;
+    padding-right: .5rem;
+}
+// .productExtraInfoData{
+    // overflow-y: scroll;
+// }

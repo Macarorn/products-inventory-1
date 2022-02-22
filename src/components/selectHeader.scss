@@ -1,0 +1,29 @@
+@use "../index.scss" as *;
+.selectHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background: white;
+    border-radius: .2rem;
+    svg{
+        padding: 0;
+        color:rgb(100, 100, 100);
+        font-size: 1.5rem ;
+    }
+}
+.selectHeaderCheckbox{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: grid;
+    cursor: pointer;
+    place-items: center;
+    svg{
+        font-size: 1rem;
+    }
+
+}
+.selectHeaderDropDownIcon{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,50 @@
+@use "../index.scss" as *;
+
+// .monthSelectInput{
+    // background: #f0f0f0;
+// }
+.monthSelectMonths{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    div{
+        padding: .5rem;
+        text-align: center;
+        cursor: pointer;
+        // &:hover{
+            // background: rgba(lightgray, .2);
+            // color: black
+        // }
+    }
+
+}
+.monthSelectYear{
+    text-align: center;
+    margin:auto;
+    width: fit-content;
+    display: flex;
+    input{
+        width: 4ch;
+        padding: .5rem;
+        border: none;
+        // border-bottom: 1px solid lightgray;
+        outline: none;
+        font-size: 1.2rem;
+        background: transparent;
+        cursor: pointer;
+        -moz-appearance: textfield;
+        // &:hover{
+            // background: rgba(lightgray, .2);
+            // color: black
+        // }
+    }
+}
+.monthSelectYearButtons{
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    cursor: pointer;
+    // width: fit-content;
+}

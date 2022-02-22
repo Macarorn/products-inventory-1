@@ -1,0 +1,11 @@
+@use "../index.scss" as *;
+
+.radioButtons{
+    label{
+        display: flex;
+        align-items: center;
+    }
+    p{
+        text-transform: capitalize;
+    }
+}

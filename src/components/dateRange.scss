@@ -1,0 +1,99 @@
+@use "../index.scss" as *;
+.dateRange{
+    width: fit-content;
+    background: white;
+    position: relative;
+    .closeIcon{
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: .2rem;
+        cursor: pointer;
+    }
+}
+.dateRangeHeader{
+    box-shadow: $boxShadowParams;
+    display: grid;
+    grid-template-columns: 1fr 3ch 1fr;
+    div{
+        padding: .5rem;
+    }
+}
+.text_to{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dateHeaderData{
+    display: flex;
+    cursor: pointer;
+    svg{
+        margin-left: 1rem;
+    }
+    p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.dateRangeMonths{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    div{
+        padding: .5rem;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+            background: white;
+            color: black
+        }
+    }
+
+}
+.dateRangeYear{
+    text-align: center;
+    margin:auto;
+    width: fit-content;
+    display: flex;
+    input{
+        width: 4ch;
+        padding: .5rem;
+        border: none;
+        border-bottom: 1px solid lightgray;
+        outline: none;
+        font-size: 1.2rem;
+        background: transparent;
+        cursor: pointer;
+        -moz-appearance: textfield;
+        &:hover{
+            background: white;
+            color: black
+        }
+    }
+}
+.dateRangeSelect{
+    box-shadow: $boxShadowParams;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+.dateRangeSelect, .dateSelected{
+    background: #f0f0f0;
+}
+// .startDate{
+    // svg{
+        // margin-right: .5rem;
+    // }
+// }
+.dateYearButtons{
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    cursor: pointer;
+    // width: fit-content;
+}

@@ -1,0 +1,55 @@
+@use "../index.scss" as *;
+.stats{
+    width: 100vw;
+    max-width: 90%;
+    margin: auto;
+    padding-top: 1rem;
+}
+.statsHeader{
+    background: white;
+    border-radius: .5rem;
+}
+
+.statsBody{
+    background: white;
+    margin-top: .5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+.statsCharts{
+    margin-top: .5rem;
+}
+.statsChartsHeader{
+    padding: .5rem;
+}
+.statsDataChart{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.statsProductsInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    span{
+        background: whitesmoke;
+        border: 1px solid;
+        padding: .5rem;
+        margin: 1rem;
+        border-radius: .5rem;
+    }
+    h3{
+        color: #707070;
+    }
+    p{
+        color: black;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .statsDataChart{
+        grid-template-columns: 1fr;
+    }
+    .statsProductsInfo{
+        grid-template-columns: 1fr;
+    }
+}

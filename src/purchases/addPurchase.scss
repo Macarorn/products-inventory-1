@@ -1,0 +1,92 @@
+@use "../index.scss" as *;
+.addPurchase{
+    background: white;
+
+    border-radius: .5rem;
+    max-width: 35ch;
+
+    h4{
+        $grayScale: 100;
+        color: rgb($grayScale, $grayScale, $grayScale);
+    }
+}
+.addPurchaseHeader{
+    padding: .5rem;
+    color: gray;
+    position: relative;
+    svg{
+        padding: .5rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+.addPurchaseForm{
+    padding-inline: .5rem;
+
+    label{
+        display: flex;
+        padding: .3rem;
+    }
+    p{
+        margin-right: .5rem;
+    }
+    span{
+        padding: .3rem;
+    }
+    h4{
+        margin-right: .5rem;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid $beautyBlue;
+        -webkit-appearance: textfield;
+        width: 50%;
+        outline: none;
+        margin-left: auto;
+    }
+}
+.addPurchaseProductInfo{
+    width: 100%;
+    margin-bottom: .5rem;
+    img{
+        aspect-ratio: 16/9;
+        width: 100%;
+    }
+    span{
+        display: flex;
+        padding: .2rem;
+        padding-inline: .7rem;
+    }
+    p{
+        text-transform: capitalize;
+        margin-left: .5rem;
+    }
+}
+.addPurchaseDetails{
+    span{
+        display: flex;
+        align-items: center;
+        h4{
+            margin-right: auto;
+        }
+    }
+}
+.addProductButtons{
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+.addProductSubmitButton{
+    background: $beautyBlue;
+    border: none;
+    color: white;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.addProductResetButton{
+    color:$beautyBlue;
+    background: transparent;
+    border: none;
+    margin-left: auto;
+}

@@ -1,0 +1,228 @@
+@use "../index.scss" as *;
+$mediaScreen: $mediaThreshold;
+// .add_product{
+//     width: 100vw;
+//     min-height: 100vh;
+//     min-height: -webkit-fill-available;
+//     display: grid;
+//     place-items: center;
+//     background: rgba(black, 0.2);
+//     position: absolute;
+//     top: 0;
+//     z-index: 1000;
+//     position: fixed;
+//     left: 0;
+// }
+.add_product_body{
+    width: 100vw;
+    max-width: 50ch;
+    position: relative;
+    max-height: 80vh;
+    box-shadow: $boxShadowParams;
+    background: white;
+    border-radius: .2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+.add_product_header{
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: $beautyBlue;
+}
+.add_product_form{
+    width: 80%;
+    max-width: 50ch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image_preview{
+    width: 100%;
+    // max-width: 50ch;
+    margin-bottom: 1rem;
+    color: gray;
+    img, label{
+        aspect-ratio: 16/9;
+        box-shadow: $boxShadowParams;
+    }
+}
+.image_preview_errase{
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    padding: .5rem;
+    font-size: 1.5rem;
+    color: rgba(gray, .5);
+    &:hover{
+        color: rgba(gray, .9);
+    }
+}
+.image_preview_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image_preview_placeholder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    svg{
+        cursor: pointer;
+        font-size: 3rem;
+    }
+}
+.add_product_close{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    font-size: 2rem;
+    padding: .5rem;
+    color:  rgba(gray, .5);
+    &:hover{
+        color: gray;
+    }
+}
+#input_type_image{
+    display: none;
+}
+.input_image{
+    display: flex;
+    align-items: center;
+    padding-block: .5rem;
+    width: 100%;
+    justify-content: center;
+    background: $beautyBlue;
+    color:white;
+    border-radius: 2rem;
+    svg{
+        margin-right: .5rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+.inputBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    color: gray;
+    &:hover{
+        color: $beautyBlue;
+    }
+    input, textarea{
+        width: 50%;
+        background: whitesmoke;
+        outline: none;
+        border: none;
+        padding: .5rem;
+        border-radius: .5rem;
+        margin-inline: 1rem;
+
+        &[type=number]{
+            -moz-appearance:textfield;
+            max-width: 12ch;
+        }
+    }
+    label{
+        transition: .25s ease;
+        top:0;
+        pointer-events: none;
+        display: block;
+        
+    }
+    textarea{
+        height: 7rem;
+    }
+}
+
+.inputText{
+    flex-direction: column;
+    input{
+        width: 90%;
+        margin: 0;
+    }
+    textarea{
+        width: 90%;
+        margin: 0;
+    }
+}
+.buttons{
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-block: 2rem;
+    button{
+
+        border: none;
+        padding: .5rem;
+        border-radius: 1rem;
+        background: $beautyBlue;
+        padding-inline: 1rem;
+        color: #fff;
+        cursor: pointer;
+    }
+    .resetButton{
+        float: right;
+        background: transparent;
+        color: $beautyBlue;
+        
+    }
+}
+
+
+.addProductCategories{
+    width: 100%;
+    margin-top: 1rem;
+    .addProductCategories_p{
+        color:gray;
+        padding-block: .5rem;
+    }
+    .radioButtons{
+        display: flex;
+        // width: 13rem;
+        flex-wrap: wrap;
+        // margin-top: 1rem;
+        p {
+            border: 1.5px solid gray;
+            border-radius: 3rem;
+            width: fit-content;
+            padding-inline: .5rem;
+            margin: .1rem;
+            color: gray;
+            &:hover{
+                // color: $beautyBlue;
+                border: 1.5px solid $beautyBlue;
+            }
+        }
+        input {
+            display: none;
+            &:checked ~ p{
+                border: 1.5px solid $beautyBlue;
+                color: $beautyBlue;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $mediaScreen){
+    .add_product_body{
+        max-width: 100vw;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        padding: 0;
+        border-radius: 0px;
+    }
+}
